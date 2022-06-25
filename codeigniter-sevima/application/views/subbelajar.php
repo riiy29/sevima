@@ -38,7 +38,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="wrap-list">
                             <div class="image">
-                                <a href='<?= base_url("belajardetail/$subbelajar->id_pelajaran/$loop->id_video") ?>'>
+                                <a href='<?= base_url("belajardetail/$loop->id_video") ?>'>
                                     <img src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/series/belajar-laravel-8-dari-awal-ign7z.jpg" class="img-responsive" alt="">
                                 </a>
                             </div>
