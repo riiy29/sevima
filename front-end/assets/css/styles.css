@@ -9,6 +9,10 @@ a {
     text-decoration: none;
     color: #0e2e50;
 }
+.btn-primary {
+    background-color: #00b98e;
+    border-color: #00b98e;
+}
 /* Navbar Style */
 .navbar-z {
     position: relative;
@@ -158,6 +162,23 @@ a {
     font-size: 32px;
 }
 
+/* Page Perpustakaan */
+.perpus .list-buku .wrap-buku .cover img {
+    width: 100%;
+    padding: 10px;
+}
+.perpus .list-buku .wrap-buku .title {
+    text-align: center;
+    margin-top: 8px;
+}
+.perpus .list-buku .wrap-buku .title h6 {
+    font-size: 14px;
+    margin-bottom: .6rem;
+}
+.perpus .list-buku .wrap-buku .title .btn {
+    padding: 6px 0;
+    width: 68%;
+}
 footer {
     margin-top: 80px;
     background-color: #0E2E50;
