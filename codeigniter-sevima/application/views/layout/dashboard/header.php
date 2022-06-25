@@ -11,7 +11,6 @@
 
   <!-- CSS Libraries -->
   <link rel="stylesheet" href="<?= base_url('assets/dashboard/modules/jqvmap/dist/jqvmap.min.css')?>">
-  <link rel="stylesheet" href="<?= base_url('assets/dashboard/modules/summernote/summernote-bs4.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets/dashboard/modules/jquery-selectric/selectric.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets/dashboard/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets/dashboard/modules/datatables/datatables.min.css')?>">
@@ -43,8 +42,8 @@
             <div class="d-sm-none d-lg-inline-block"><i class="fas fa-user-alt mr-2 has-icon" style="font-size:14px; "></i> <span style="text-transform:capitalize;">Buchori</span></div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">
-                <p style="text-transform:lowercase; margin-bottom:0; font-size:11px;">
-                Role : Guru
+                <p style="text-transform:uppercase; margin-bottom:0; font-size:11px;">
+                Guru - programmer
                 </p>
                 
               </div>

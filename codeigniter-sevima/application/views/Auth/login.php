@@ -43,12 +43,12 @@
               <div class="card-header"><h4>Login</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+                <form method="POST" action="<?php echo site_url('Auth/login')?>">
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
+                    <input id="email" type="email" class="form-control" name="email" >
                     <div class="invalid-feedback">
-                      Please fill in your email
+                      <?php echo $this->session->flashdata('msg');?>
                     </div>
                   </div>
 
@@ -61,21 +61,21 @@
                         </a>
                       </div>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <input id="password" type="password" class="form-control" name="password" >
                     <div class="invalid-feedback">
-                      please fill in your password
+                      <?php echo $this->session->flashdata('msg');?>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                      <input type="checkbox" name="remember" class="custom-control-input"  id="remember-me">
                       <label class="custom-control-label" for="remember-me">Remember Me</label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" >
                       Login
                     </button>
                   </div>

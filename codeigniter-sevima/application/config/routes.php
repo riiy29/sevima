@@ -65,7 +65,7 @@ $route['guru'] = 'Web/guru';
 $route['mengajar'] = 'Web/mengajar';
 
 // Auth
-$route['auth'] = 'Auth/login';
+$route['auth'] = 'Auth/view';
 $route['register'] = 'Auth/register';
 
 // Dashboard 

@@ -19,7 +19,6 @@
   <script src="<?= base_url('assets/dashboard/js/stisla.js')?>"></script>
   
   <!-- JS Libraies -->
-  <script src="<?= base_url('assets/dashboard/modules/summernote/summernote-bs4.js')?>"></script>
   <script src="<?= base_url('assets/dashboard/modules/chocolat/dist/js/jquery.chocolat.min.js')?>"></script>
   <script src="<?= base_url('assets/dashboard/modules/datatables/datatables.min.js')?>"></script>
   <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
