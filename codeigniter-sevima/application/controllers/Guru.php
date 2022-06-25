@@ -8,7 +8,13 @@ class Guru extends CI_Controller {
 		$this->load->model('Guru_model');
         $this->load->library('form_validation');
 	}
-
+    public function hubungiguru()
+	{
+        $data['guru'] = $this->Guru_model->getAll();
+		$this->load->view('layout/landing/header');
+		$this->load->view('murid/hubungiguru', $data);
+		$this->load->view('layout/landing/footer');
+	}
 	public function home()
 	{
         $data['guru'] = $this->Guru_model->getAll();

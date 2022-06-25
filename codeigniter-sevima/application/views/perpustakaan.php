@@ -30,18 +30,19 @@
             
             <div class="list-buku">
                 <div class="row">
+                    <?php foreach($buku as $row):?>
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                         <div class="wrap-buku">
                             <div class="cover">
                                 <img src="assets/img/cover-buku/2.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="title">
-                                <h6>Belajar Codeigniter 4</h6>
-                                <a href="bukudetail" class="btn btn-primary btn-sm">Lihat Buku</a>
+                                <h6><?=$row->nama_buku?></h6>
+                                <a href="<?= base_url("bukudetail/$row->id_buku") ?>" class="btn btn-primary btn-sm">Lihat Buku</a>
                             </div>
                         </div>
                     </div>
-                  
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>

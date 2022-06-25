@@ -53,14 +53,14 @@ $route['default_controller'] = 'Web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['perpustakaan'] = 'Web/perpus';
-$route['bukudetail'] = 'Web/bukudetail';
+$route['perpustakaan'] = 'buku/perpus';
+$route['bukudetail/(:num)'] = 'buku/bukudetail/$1';
 $route['belajar'] = 'Web/belajar';
 $route['subbelajar'] = 'Web/subbelajar';
 $route['belajardetail'] = 'Web/belajardetail';
 $route['murid'] = 'Web/murid';
 $route['absen'] = 'absen/absen';
-$route['hubungiguru'] = 'Web/hubungiguru';
+$route['hubungiguru'] = 'guru/hubungiguru';
 $route['guru'] = 'Web/guru';
 $route['mengajar'] = 'Web/mengajar';
 

@@ -47,58 +47,21 @@
             </div>
             <div class="list-guru">
                 <div class="row text-center">
+                    <?php foreach($guru as $list):?>
                     <!-- Team item -->
                     <div class="col-xl-3 col-sm-6 mb-5">
                         <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">Guru - Pemrograman</span>
+                            <h5 class="mb-0"><?=$list->nama_guru?></h5><span class="small text-uppercase text-muted">Guru - <?=$list->nama_jurusan?></span>
                             <ul class="social mb-0 list-inline mt-3">               
                                 <li class="list-inline-item">
-                                    <a href="https::/wa.me/+62....." class="btn btn-primary">
+                                    <a href="https://wa.me/<?=$list->no_wa?>" target="_blank" class="btn btn-primary">
                                        Hubungi Guru
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div><!-- End -->
-                       <!-- Team item -->
-                       <div class="col-xl-3 col-sm-6 mb-5">
-                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">Guru - Pemrograman</span>
-                            <ul class="social mb-0 list-inline mt-3">               
-                                <li class="list-inline-item">
-                                    <a href="https::/wa.me/+62....." class="btn btn-primary">
-                                       Hubungi Guru
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- End -->
-                       <!-- Team item -->
-                       <div class="col-xl-3 col-sm-6 mb-5">
-                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">Guru - Pemrograman</span>
-                            <ul class="social mb-0 list-inline mt-3">               
-                                <li class="list-inline-item">
-                                    <a href="https::/wa.me/+62....." class="btn btn-primary">
-                                       Hubungi Guru
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- End -->
-                       <!-- Team item -->
-                       <div class="col-xl-3 col-sm-6 mb-5">
-                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">Guru - Pemrograman</span>
-                            <ul class="social mb-0 list-inline mt-3">               
-                                <li class="list-inline-item">
-                                    <a href="https::/wa.me/+62....." class="btn btn-primary">
-                                       Hubungi Guru
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- End -->
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>

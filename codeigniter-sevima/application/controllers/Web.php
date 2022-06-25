@@ -46,12 +46,7 @@ class Web extends CI_Controller {
 		$this->load->view('layout/landing/footer');
 	}
 	
-	public function hubungiguru()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('murid/hubungiguru');
-		$this->load->view('layout/landing/footer');
-	}
+	
 	public function guru()
 	{
 		$this->load->view('layout/landing/header');

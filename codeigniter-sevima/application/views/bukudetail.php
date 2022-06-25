@@ -9,21 +9,22 @@
                             <div class="row">
                                 <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12">
                                     <div class="cover-buku text-center" >
-                                        <img src="assets/img/cover-buku/2.jpg" class="img-responsive" alt="">
+                                        <img src="<?=base_url('assets/img/cover-buku/2.jpg')?>" class="img-responsive" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12">
                                     <div class="text-hero mb-0 pb-0">
-                                        <h5>Belajar Codeigniter 4 
+                                        <h5><?=$buku_detail->nama_buku?> </h5>
                                     </div>
                                     <div class="info-buku">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptatibus possimus sapiente optio accusamus eaque unde, ratione facilis, porro quasi odit atque recusandae perspiciatis magni, obcaecati nisi a ab deleniti.</p>
-                                        <p>Link Buku : <a href="#" style="text-decoration: underline;">Klik Untuk Donwload Buku</a></p>
+                                        <p><?=$buku_detail->desc_buku?></p>
+                                        <p>Link Buku : <a href="<?=$buku_detail->file_buku?>" style="text-decoration: underline;">Klik Untuk Donwload Buku</a></p>
                                         <p>Minta Buku di WhatsApp :</p>
             
-                                        <form class="row g-3">
+                                        <form class="row g-3" action="<?=base_url('gallery/autosendmsg')?>" method="post">
                                             <div class="col-auto">
-                                              <input type="text" class="form-control"  placeholder="cth: +62888123123">
+                                                <input type="hidden" value="<?=$buku_detail->file_buku?>" name="linkpdf">
+                                              <input type="text" class="form-control" name="nomor" placeholder="cth: +62888123123">
                                               <span>*Nomor yang valid dan diawali dengan +62</span>
                                             </div>
                                             <div class="col-auto">

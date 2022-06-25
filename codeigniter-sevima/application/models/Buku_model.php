@@ -16,7 +16,7 @@ class Buku_model extends CI_Model {
 
     public function save()
     {
-        $config['upload_path']          = './assets/img/cover-buku';
+        $config['upload_path']          = './assets/img/cover-buku/';
         $config['allowed_types']        = 'pdf';
         $config['overwrite']            = true;
         $config['file_name']            = md5($_FILES["pdf_file"]['name']);
@@ -30,7 +30,7 @@ class Buku_model extends CI_Model {
             $post = $this->input->post();
             $this->nama_buku = $post['nama'];
             $this->desc_buku = $post['deskripsi'];
-            $this->file_buku = base_url("assets/img/cover-buku".$config['file_name']).'.'.pathinfo($_FILES["pdf_file"]['name'], PATHINFO_EXTENSION);
+            $this->file_buku = base_url("assets/img/cover-buku/".$config['file_name']).'.'.pathinfo($_FILES["pdf_file"]['name'], PATHINFO_EXTENSION);
             $this->diinput_tgl = date('Y-m-d');
             $this->db->insert('sevima_buku', $this);
         }
