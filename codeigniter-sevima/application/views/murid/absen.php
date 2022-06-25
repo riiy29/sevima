@@ -5,40 +5,39 @@
             </div>
             <div class="card px-5">
                 <div class="card-body pt-4">
-                    <form>
-                        <div class="form-group row mb-3">
-                            <label for="inputEmail3" class="col-form-label">Nama</label>
+                    <form method="POST" action="<?= base_url().'absen/add'?>">
+                    <div class="form-group row mb-3">
+                            <label for="inputPassword3" class="col-form-label">Nama Siswa</label>
                             <div class="">
-                              <input type="text" class="form-control" id="inputEmail3" value="MuhammadBuchori" disabled>
+                              <select id="inputState"  name="nama" class="form-control">
+                                  <option selected>Pilih</option>
+                                  <?php foreach($listsiswa as $row):?>
+                                    <option value="<?=$row->id_user?>"> <?=$row->nama?></option>
+                                  <?php endforeach;?>
+                              </select> 
                             </div>
                         </div>
                         
                         <div class="form-group row mb-3">
                             <label for="inputPassword3" class="col-form-label">Keterangan</label>
                             <div class="">
-                              <select id="inputState" class="form-control">
+                              <select id="inputState" name="ket" class="form-control">
                                   <option selected>Choose...</option>
-                                  <option> Masuk</option>
-                                  <option> Izin</option>
-                                  <option> Sakit</option>
+                                  <option value="Masuk"> Masuk</option>
+                                  <option value="Izin"> Izin</option>
+                                  <option value="Sakit"> Sakit</option>
                               </select> 
                             </div>
                         </div>
-                        <div class="form-group row mb-3">
-                          <label for="inputEmail3" class="col-form-label">Waktu Absen</label>
-                          <div class="">
-                            <input type="datetime-local" class="form-control" id="birthdaytime" name="birthdaytime">
-                          </div>
-                        </div>
+                       
                         <div class="form-group row mb-3">
                             <label for="inputPassword3" class="col-form-label">Mata Pelajaran</label>
                             <div class="">
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" class="form-control" name="bidang">
                                     <option selected>Choose...</option>
-                                    <option> Rekayasa Perangkat Lunak</option>
-                                    <option> Teknik Elektro</option>
-                                    <option> Desain Komunikasi Visual</option>
-                                    <option> Copywriting</option>
+                                    <?php foreach($listbidang as $rows):?>
+                                    <option value="<?=$rows->id_jurusan?>"> <?=$rows->nama_jurusan?></option>
+                                    <?php endforeach;?>
                                 </select> 
                             </div>
                         </div>

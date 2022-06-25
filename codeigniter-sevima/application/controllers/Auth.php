@@ -15,6 +15,33 @@ class Auth extends CI_Controller {
    
 	}
 
+    public function login()
+    {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        
+        if ($login = $this->Login_model->login($email, $password)) {
+            $this->session->set_userdata('data', [
+                'is_login' => true,
+                'data' => $login
+            ]);
+            switch ($login->user_akses) {
+                case '1': // admin
+                    return redirect('dashboard');
+                    break;
+                case '2': // guru
+                    return redirect('guru');
+                    break;
+                case '3': // murid
+                    return redirect('murid');
+                    break;
+            }
+        } else {
+            $this->session->set_flashdata('msg', 'Email atau Password Salah');
+            return redirect('auth');
+        }
+    }
+
     // public function login() {
     //     $email=htmlspecialchars($this->input->post('email',TRUE),ENT_QUOTES);
     //     $password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);

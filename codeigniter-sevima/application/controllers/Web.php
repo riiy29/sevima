@@ -45,12 +45,7 @@ class Web extends CI_Controller {
 		$this->load->view('murid/home-murid');
 		$this->load->view('layout/landing/footer');
 	}
-	public function absen()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('murid/absen');
-		$this->load->view('layout/landing/footer');
-	}
+	
 	public function hubungiguru()
 	{
 		$this->load->view('layout/landing/header');

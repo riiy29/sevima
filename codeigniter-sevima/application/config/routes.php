@@ -59,7 +59,7 @@ $route['belajar'] = 'Web/belajar';
 $route['subbelajar'] = 'Web/subbelajar';
 $route['belajardetail'] = 'Web/belajardetail';
 $route['murid'] = 'Web/murid';
-$route['absen'] = 'Web/absen';
+$route['absen'] = 'absen/absen';
 $route['hubungiguru'] = 'Web/hubungiguru';
 $route['guru'] = 'Web/guru';
 $route['mengajar'] = 'Web/mengajar';
@@ -70,6 +70,7 @@ $route['register'] = 'Auth/register';
 
 // Dashboard 
 $route['dashboard'] = 'Dashboard/home';
+$route['dashboard/absen'] = 'absen/home';
 $route['dashboard/pelajaran'] = 'pelajaran/home';
 $route['dashboard/video'] = 'video/home';
 $route['dashboard/jurusan'] = 'Jurusan/home';

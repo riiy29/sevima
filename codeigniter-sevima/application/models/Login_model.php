@@ -4,16 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login_model extends CI_Model {
 
 
-	//cek nip dan password dosen
-    function auth_guru($email,$password){
-        $query=$this->db->query("SELECT * FROM sevima_user WHERE email='$email' AND password=MD5('$password') LIMIT 1");
-        return $query;
-    }
- 
-    //cek nim dan password mahasiswa
-    function auth_murid($email,$password){
-        $query=$this->db->query("SELECT * FROM sevima_user WHERE email='$email' AND password=MD5('$password') LIMIT 1");
-        return $query;
+	public function login($email, $password)
+    {
+        $this->db->where('email', $email);
+        $this->db->where('password', md5($password));
+        $query = $this->db->get('sevima_user');
+        if ($query->num_rows() > 0) {
+            return $query->row();
+        } else {
+            return false;
+        }
     }
 	
 }
