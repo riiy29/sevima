@@ -247,6 +247,38 @@ a:hover {
     width: 100%;
     height: 500px;
 }
+.mengajar .login-act a {
+    text-decoration: none;
+}
+
+.mengajar .login-act .button-teaser {
+    background-image: url(../img/slider-home/slider-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 80px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+.mengajar .login-act .button-teaser::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 185, 142, .9);
+    border-radius: 12px;
+}
+.mengajar .login-act .button-teaser h3 {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    position: relative;
+}
 
 footer {
     margin-top: 80px;

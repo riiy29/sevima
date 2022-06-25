@@ -9,4 +9,12 @@
             $('#nav-top').removeClass('sticky-top');
         }
     });
+
+    $(document).ready(function () {
+        $('#elearning').DataTable( {
+            responsive: true
+        } );
+    });
+
 })(jQuery);
+
