@@ -21,7 +21,7 @@
                                         <p>Link Buku : <a href="<?=$buku_detail->file_buku?>" style="text-decoration: underline;">Klik Untuk Donwload Buku</a></p>
                                         <p>Minta Buku di WhatsApp :</p>
             
-                                        <form class="row g-3" action="<?=base_url('gallery/autosendmsg')?>" method="post">
+                                        <form class="row g-3" action="<?=base_url('buku/autosendmsg')?>" method="post">
                                             <div class="col-auto">
                                                 <input type="hidden" value="<?=$buku_detail->file_buku?>" name="linkpdf">
                                               <input type="text" class="form-control" name="nomor" placeholder="cth: +62888123123">

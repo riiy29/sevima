@@ -50,7 +50,7 @@ class Buku extends CI_Controller {
 		if($status->status == 'error'){
 			echo "<script>alert('nomor yang anda masukkan salah'); window.location.href='/perpustakaan';</script>";
 		}else{
-			redirect('perpustakaan');
+			echo "<script>alert('Pesan Berhasil dkirim, silahkan cek Whatsapp anda'); window.location.href='/perpustakaan';</script>";
 		}
 	}
     public function add()
