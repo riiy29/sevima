@@ -69,20 +69,20 @@
               <div class="card">
                   <div class="card-body">
                     <div class="form-group ">
-                      <label for="inputEmail4">Nama Buku</label>
+                      <label for="inputEmail4">Nama Guru</label>
                       <input type="text" class="form-control" id="inputEmail4" placeholder="" name="nama">
                     </div>
                     <div class="form-group ">
-                      <label for="inputEmail4">Deskripsi</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="deskripsi">
+                      <label for="inputEmail4">No. Whatsapp</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="no_wa">
                     </div>
-                    <div class="form-group ">
-                      <div class="section-title">File PDF buku</div>
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" name="pdf_file">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                      </div>
-                    </div>
+                    
+                    <select class="form-control">
+                        <option>Open this select menu</option>
+                        <?php foreach($jurusan as $rows):?>
+                        <option name="jurusan" value="<?=$rows->id_jurusan?>"><?=$rows->nama_jurusan?></option>
+                        <?php endforeach;?>
+                      </select>
                   </div>
                   <div class="card-footer">
                     <button type="" class="btn btn-primary">Submit</button>
@@ -112,7 +112,7 @@
         .then((isConfirm) => {
             if (isConfirm) {
             $.ajax( {
-                url: '/jurusan/delete/'+id,
+                url: '/guru/delete/'+id,
                 type: 'DELETE',
                 error: function() {
                     alert(' Ada yang error ');

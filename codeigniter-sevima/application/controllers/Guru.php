@@ -12,6 +12,7 @@ class Guru extends CI_Controller {
 	public function home()
 	{
         $data['guru'] = $this->Guru_model->getAll();
+        $data['jurusan'] = $this->Guru_model->getJurusan();
 		$this->load->view('layout/dashboard/header');
 		$this->load->view('dashboard/guru', $data);
 		$this->load->view('layout/dashboard/footer');
