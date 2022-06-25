@@ -51,6 +51,18 @@ a {
 .hero .content  {
     padding: 30% 0 0 4.5rem;
 }
+.hero .content .action-btn .btn-primary{
+    background-color: #00b98e;
+    border: 2px solid #00b98e;
+    font-weight: 600;
+    margin-left: 19px;
+}
+.hero .content .action-btn .btn-secondary{
+    background-color: #fff;
+    border: 2px solid #00b98e;
+    font-weight: 600;
+    color: #000;
+}
 .hero .content .text-hero {
     padding-bottom: 80px;
 }
