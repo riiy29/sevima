@@ -1,49 +1,37 @@
-    <!-- Hero -->
-    <section class="hero">
-        <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="content sub-page-content">
-                        <div class="text-hero pb-0">
-                            <h5>Belajar Laravel 8 Dari Awal </h5>
-                            <h6>Bagi anda yang ingin belajar dan mengetahui lebih lanjut apa itu laravel silahkan ikuti playlist video ini.</h6>  
-                        </div>
-                        <div class="info">
-                            <i class="fas fa-user-alt"></i>
-                            <span>Bu Ika Hermawan</span>
-                            <i class="fas fa-calendar-alt ms-3"></i>
-                            <span>23-10-2022</span>
-                            <i class="fas fa-film ms-3"></i>
-                            <span>6 Episode </span>
-                        </div>
-                        <div class="action-btn mt-5 pt-2">
-                            <a href="#pembelajaran" class="btn btn-lg btn-secondary py-3 px-4">Mulai Pembelajaran </a>
-                            <a href="" class="btn btn-lg btn-primary py-3 px-5">Download Modul</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="page-banner">
-                        <img src="assets/img/banner-bg/banner-1.avif" class="img-responsive " alt="">
-                    </div>
-                </div>
+<!-- Video Belajar -->
+<section class="video-belajar ">
+        <div class="container">
+            <div class="iframe-ytb">
+                <iframe  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
             </div>
+            <h5>Belajar Laravel 8 dari awal - Mengenal Apa itu Routing</h5>
+            <div class="info">
+                <i class="fas fa-user-alt"></i>
+                <span>Bu Ika Hermawan</span>
+                <i class="fas fa-calendar-alt ms-3"></i>
+                <span>23-10-2022</span>
+            </div>
+          
         </div>
+       
     </section>
+
     
-    <section class="pembelajaran mt-5 pt-5" id="pembelajaran">
+   <section class="pembelajaran mt-4" id="pembelajaran">
         <div class="container"> 
+            <h5>Lanjut Materi</h5>
             <div class="list-video">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="wrap-list">
                             <div class="image">
-                                <a href="belajardetail">
+                                <a href="">
                                     <img src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/series/belajar-laravel-8-dari-awal-ign7z.jpg" class="img-responsive" alt="">
                                 </a>
                             </div>
                             <div class="text">
-                                <a href="belajardetail">1. Belajar Laravel 8 dari awal</a>
+                                <a href="#">1. Belajar Laravel 8 dari awal</a>
                                 <div class="info">
                                     <i class="fas fa-user-alt"></i>
                                     <span>Bu Ika Hermawan</span>
@@ -108,6 +96,25 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+   </section>
+
+    <section class="saran">
+        <div class="container">
+            <div class="saran-wrap">
+                <h5>Komentar untuk video - Mengenal Apa itu Routing</h5>
+                <form action="" method="post">
+                    <div class="mb-3 mt-3">
+                        <label for="exampleFormControlInput1" class="form-label">Username Siswa</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="usernamesiswa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Komentar</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary py-2 px-5">Berikan Komentar</button>
+                </form>
             </div>
         </div>
     </section>

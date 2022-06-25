@@ -33,6 +33,12 @@ class Web extends CI_Controller {
 		$this->load->view('subbelajar');
 		$this->load->view('layout/landing/footer');
 	}
+	public function belajardetail()
+	{
+		$this->load->view('layout/landing/header');
+		$this->load->view('belajar-detail');
+		$this->load->view('layout/landing/footer');
+	}
 	public function murid()
 	{
 		$this->load->view('layout/landing/header');
@@ -49,6 +55,18 @@ class Web extends CI_Controller {
 	{
 		$this->load->view('layout/landing/header');
 		$this->load->view('murid/hubungiguru');
+		$this->load->view('layout/landing/footer');
+	}
+	public function guru()
+	{
+		$this->load->view('layout/landing/header');
+		$this->load->view('guru/home-guru');
+		$this->load->view('layout/landing/footer');
+	}
+	public function mengajar()
+	{
+		$this->load->view('layout/landing/header');
+		$this->load->view('guru/mengajar');
 		$this->load->view('layout/landing/footer');
 	}
 

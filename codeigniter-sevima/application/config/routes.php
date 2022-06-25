@@ -57,7 +57,9 @@ $route['perpustakaan'] = 'Web/perpus';
 $route['bukudetail'] = 'Web/bukudetail';
 $route['belajar'] = 'Web/belajar';
 $route['subbelajar'] = 'Web/subbelajar';
-
+$route['belajardetail'] = 'Web/belajardetail';
 $route['murid'] = 'Web/murid';
 $route['absen'] = 'Web/absen';
 $route['hubungiguru'] = 'Web/hubungiguru';
+$route['guru'] = 'Web/guru';
+$route['mengajar'] = 'Web/mengajar';
