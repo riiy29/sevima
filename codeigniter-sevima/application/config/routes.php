@@ -63,3 +63,6 @@ $route['absen'] = 'Web/absen';
 $route['hubungiguru'] = 'Web/hubungiguru';
 $route['guru'] = 'Web/guru';
 $route['mengajar'] = 'Web/mengajar';
+
+// Dashboard 
+$route['dashboard'] = 'Dashboard/home';
