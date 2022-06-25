@@ -26,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <!-- Logo dari dribble -->
-                    <img src="assets/img/logo-icon.png" class="img-responsive" alt="">
+                    <img src="<?=base_url('assets/img/logo-icon.png')?>" class="img-responsive" alt="">
                 </a> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,19 +34,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Profil</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Perpustakaan</a>
+                            <a class="nav-link" href="perpustakaan">Perpustakaan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">e-learning</a>
+                            <a class="nav-link" href="belajar">e-learning</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kontak Kami</a>
+                            <a class="nav-link" href="contact">Kontak Kami</a>
                         </li>
                     </ul>
                 </div>
