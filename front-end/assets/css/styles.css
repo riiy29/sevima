@@ -12,6 +12,9 @@ a {
     text-decoration: none;
     color: #0e2e50;
 }
+a:hover {
+    color: #00b98e;
+}
 .btn-primary {
     background-color: #00b98e;
     border-color: #00b98e;
@@ -132,6 +135,10 @@ a {
 }
 .hero .content .cover-buku img{
     width: 100%;
+}
+.hero .sub-page-content .info i{
+    font-size: 13px;
+    margin-right: 6px;
 }
 @media (min-width:1200px) {
     .hero .content .cover-buku img {
