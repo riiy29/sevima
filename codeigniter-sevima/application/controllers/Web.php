@@ -32,11 +32,6 @@ class Web extends CI_Controller {
 		$this->load->view('guru/home-guru');
 		$this->load->view('layout/landing/footer');
 	}
-	public function mengajar()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('guru/mengajar');
-		$this->load->view('layout/landing/footer');
-	}
+	
 
 }

@@ -10,14 +10,14 @@
                         <div class="login-act">
                             <div class="row">
                                 <div class="col-lg-6 wrap">
-                                    <a href="murid" target="_blank">
+                                    <a href="<?php echo site_url('auth')?>" target="_blank">
                                         <div class="button-teaser">
                                             <h3>Student Site</h3>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-lg-6">
-                                    <a href="guru" target="_blank">
+                                    <a href="<?php echo site_url('auth')?>" target="_blank">
                                         <div class="button-teaser">
                                             <h3>Teacher Site</h3>
                                         </div>

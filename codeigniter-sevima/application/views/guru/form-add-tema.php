@@ -5,27 +5,36 @@
             </div>
             <div class=" px-5">
                 <div class="card-body pt-4">
-                    <form>
+                    <form action="<?= base_url().'pelajaran/add'?>" method="post" enctype="multipart/form-data">
                         <div class="form-group row mb-3">
                             <label for="inputEmail3" class="col-form-label">Nama Pembelajaran</label>
                             <div class="">
-                              <input type="text" class="form-control" id="inputEmail3" value="" placeholder="" >
+                              <input type="text" class="form-control" id="inputEmail3" name="nama" >
                             </div>
                         </div>
                         <div class="form-group row mb-2">
                             <label for="inputEmail3" class="col-form-label">Modul Pembelajaran</label>
                             <div >
                          
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" name="pdf_file" id="formFile">
                                 <span class="text-danger text-sm">*file wajib pdf</span>
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Deskripsi </label>
                             <div>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="deskripsi" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                          
+                        </div>
+                        <div class="form-group">
+                        <select name="guru" class="form-select" aria-label="Default select example">
+                            <option selected >Open this select menu</option>
+                            
+                            <?php foreach($guru as $rows):?>
+                                <option value="<?=$rows->id_guru?>?" > <?=$rows->nama_guru?></option>
+                            <?php endforeach;?>
+                        </select>
                         </div>
                         <div class="form-group row mt-5"> 
                           <div class="button-absen text-center">

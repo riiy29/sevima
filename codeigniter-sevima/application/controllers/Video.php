@@ -37,4 +37,13 @@ class video extends CI_Controller {
             redirect(site_url('dashboard/video'));
         }
     }
+
+    // Page guru
+    public function v_addpelajaran()
+	{
+		$data['video'] = $this->video_model->getAll();
+		$this->load->view('layout/landing/header');
+		$this->load->view('guru/form-add-pelajaran', $data);
+		$this->load->view('layout/landing/footer');
+	}
 }

@@ -5,29 +5,28 @@
             </div>
             <div class=" px-5">
                 <div class="card-body pt-4">
-                    <form>
+                    <form action="<?= base_url().'video/add'?>" method="post" enctype="multipart/form-data">
                         <div class="form-group row mb-3">
                             <label for="inputEmail3" class="col-form-label">Pilih Pembelajaran</label>
                             <div class="">
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option> Rekayasa Perangkat Lunak</option>
-                                    <option> Teknik Elektro</option>
-                                    <option> Desain Komunikasi Visual</option>
-                                    <option> Copywriting</option>
+                                <select name="pelajaran" id="inputState" class="form-control">
+                                    <option  selected>Choose...</option>
+                                    <?php foreach($video as $rows):?>
+                                        <option  value="<?=$rows->id_pelajaran?>"><?=$rows->nama_pelajaran?></option>
+                                    <?php endforeach;?>
                                 </select> 
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputEmail3" class="col-form-label">Nama sub pelajaran</label>
                             <div class="">
-                              <input type="text" class="form-control" id="inputEmail3" value="" placeholder="" >
+                              <input type="text" class="form-control" id="inputEmail3" name="nama" >
                             </div>
                         </div>
                         <div class="form-group row mb-3">
                             <label for="inputEmail3" class="col-form-label">Link video youtube</label>
                             <div class="">
-                              <input type="text" class="form-control" id="inputEmail3" value="" placeholder="" >
+                              <input type="text" name="ytb_url" class="form-control" id="inputEmail3" value="" placeholder="" >
                             </div>
                             <span class="text-danger text-sm">*Mohon Masukkan Link Youtube yang valid</span>
                         </div>
@@ -35,7 +34,7 @@
                         <div class="form-group row mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Deskripsi </label>
                             <div>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="deskripsi" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                          
                         </div>

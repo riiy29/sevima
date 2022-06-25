@@ -6,14 +6,14 @@
             <div class="login-act">
                 <div class="row">
                     <div class="col-lg-6 wrap">
-                        <a href="form-add-tema.html" target="_blank">
+                        <a href="addtemaguru" target="_blank">
                             <div class="button-teaser">
                                 <h3>Membuat Tema Pembelajaran</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a href="#" target="_blank">
+                        <a href="addpelajaran" target="_blank">
                             <div class="button-teaser">
                                 <h3>Melanjutkan Mengajar</h3>
                             </div>
@@ -32,54 +32,19 @@
                             <th>Modul  </th>  
                             <th>Deskripsi</th>
                             <th>Tgl Upload</th>
-                            <th>Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach($pelajaran as $row):?>
                         <tr>
-                            <td>Belajar Codeigniter 4</td>
-                            <td>www.asd.pdf</td>
-                            <td>Bagi anda yang ingin belajar dan mengetahui lebih lanjut apa itu laravel silahkan ikuti playlist video ini.</td>
-                           <td>22-10-2003</td>
-                            <td>
-                                <a href="" class="btn btn-sm btn-danger">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
+                            <td><?=$row->nama_pelajaran?></td>
+                            <td><?=$row->modul_url?></td>
+                            <td><?=$row->desc_pelajaran?></td>
+                           <td><?=$row->diinput_tgl?></td>
+                         
                         </tr>
-                        <tr>
-                            <td>Belajar Codeigniter 4</td>
-                            <td>www.asd.pdf</td>
-                            <td>Bagi anda yang ingin belajar dan mengetahui lebih lanjut apa itu laravel silahkan ikuti playlist video ini.</td>
-                           <td>22-10-2003</td>
-                            <td>
-                                <a href="" class="btn btn-sm btn-danger">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Belajar Codeigniter 4</td>
-                            <td>www.asd.pdf</td>
-                            <td>Bagi anda yang ingin belajar dan mengetahui lebih lanjut apa itu laravel silahkan ikuti playlist video ini.</td>
-                           <td>22-10-2003</td>
-                            <td>
-                                <a href="" class="btn btn-sm btn-danger">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Belajar Codeigniter 4</td>
-                            <td>www.asd.pdf</td>
-                            <td>Bagi anda yang ingin belajar dan mengetahui lebih lanjut apa itu laravel silahkan ikuti playlist video ini.</td>
-                           <td>22-10-2003</td>
-                            <td>
-                                <a href="" class="btn btn-sm btn-danger">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        <?php endforeach;?>
                     </tbody>
                     
                 </table>

@@ -45,4 +45,21 @@ class Pelajaran extends CI_Controller {
             redirect(site_url('dashboard/pelajaran'));
         }
     }
+
+	// Page guru
+	public function mengajar()
+	{
+		$data['pelajaran'] = $this->pelajaran_model->getAll();
+		$this->load->view('layout/landing/header');
+		$this->load->view('guru/mengajar', $data);
+		$this->load->view('layout/landing/footer');
+	}
+	public function v_addtema()
+	{
+		$data['guru'] = $this->pelajaran_model->getGuru();
+		$this->load->view('layout/landing/header');
+		$this->load->view('guru/form-add-tema', $data);
+		$this->load->view('layout/landing/footer');
+	}
+	
 }

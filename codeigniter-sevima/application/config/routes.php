@@ -62,7 +62,9 @@ $route['murid'] = 'Web/murid';
 $route['absen'] = 'absen/absen';
 $route['hubungiguru'] = 'guru/hubungiguru';
 $route['guru'] = 'Web/guru';
-$route['mengajar'] = 'Web/mengajar';
+$route['mengajar'] = 'pelajaran/mengajar';
+$route['addtemaguru'] = 'pelajaran/v_addtema';
+$route['addpelajaran'] = 'video/v_addpelajaran';
 
 // Auth
 $route['auth'] = 'Auth/view';

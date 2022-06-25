@@ -10,8 +10,8 @@
                             <h5>Pembelajaran <span>lengkap</span> E-Learning    
                         </div>
                         <div class="action-btn">
-                            <a href="" class="btn btn-lg btn-secondary py-3 px-4">Cari Pembelajaran </a>
-                            <a href="" class="btn btn-lg btn-primary py-3 px-5">Lihat Buku</a>
+                            <a href="#belajar" class="btn btn-lg btn-secondary py-3 px-4">Cari Pembelajaran </a>
+                            <a href="perpustakaan" class="btn btn-lg btn-primary py-3 px-5">Lihat Buku</a>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
     </section>
 
 
-   <section class="pembelajaran">
+   <section class="pembelajaran" id="belajar">
         <div class="container">
             <div class="head-content">
                 <h1>Video e-learning</h1>

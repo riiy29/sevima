@@ -10,13 +10,13 @@
                         </div>
                         <div class="login-act">
                             <div class="row">
-                                <div class="col-lg-6 wrap">
+                                <!-- <div class="col-lg-6 wrap">
                                     <a href="#" target="_blank">
                                         <div class="button-teaser">
                                             <h3>Data Pembelajaran</h3>
                                         </div>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-6">
                                     <a href="mengajar" target="_blank">
                                         <div class="button-teaser">

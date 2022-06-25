@@ -8,8 +8,8 @@
                             <h5>Perpustakaan E-Book <span>terbaik</span>   
                         </div>
                         <div class="action-btn">
-                            <a href="" class="btn btn-lg btn-secondary py-3 px-4">Cari Buku</a>
-                            <a href="" class="btn btn-lg btn-primary py-3 px-5">Lihat Pembelajaran</a>
+                            <a href="#perpus" class="btn btn-lg btn-secondary py-3 px-4">Cari Buku</a>
+                            <a href="belajar" class="btn btn-lg btn-primary py-3 px-5">Lihat Pembelajaran</a>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
         </div>
     </section>
 
-    <section class="perpus">
+    <section class="perpus" id="perpus">
         <div class="container">
             <div class="head-content">
                 <h1>Kumpulan Buku</h1>
