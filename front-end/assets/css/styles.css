@@ -4,6 +4,7 @@ body {
     background: #fff;
     line-height: 1.8;
 
+  
 }
 a {
     text-decoration: none;
@@ -12,6 +13,10 @@ a {
 .btn-primary {
     background-color: #00b98e;
     border-color: #00b98e;
+}
+.btn-primary:hover {
+    background-color: #03a07b;
+    border-color: #03a07b;
 }
 /* Navbar Style */
 .navbar-z {
@@ -116,7 +121,17 @@ a {
     width: 100%;
     height: 750px;
 }
-
+.hero .content-detail {
+    padding: 200px 0 0 0 !important;
+}
+.hero .content .cover-buku img{
+    width: 100%;
+}
+@media (min-width:1200px) {
+    .hero .content .cover-buku img {
+        width: 360px;
+    }
+}
 .head-content {
     text-align: center;
     padding-top: 120px;
@@ -178,12 +193,15 @@ a {
 .perpus .list-buku .wrap-buku .title .btn {
     padding: 6px 0;
     width: 68%;
+    border-radius: 8px;
 }
 footer {
     margin-top: 80px;
     background-color: #0E2E50;
     color: #fff;
     padding: 20px;
+    bottom: 0;
+    width: 100%;
 }
 footer p {
     margin-bottom: 0;
