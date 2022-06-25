@@ -3,7 +3,7 @@ body {
     font-family: 'Overpass', sans-serif;
     background: #fff;
     line-height: 1.8;
-    max-width: 1140px; 
+    max-width: 1400px; 
 	margin: 0 auto !important; 
 	float: none !important; 
   
@@ -200,6 +200,32 @@ a {
     padding: 6px 0;
     width: 68%;
     border-radius: 8px;
+}
+.pembelajaran .list-video {
+    margin-top: 40px;
+}
+.pembelajaran .list-video .wrap-list {
+    margin-bottom: 50px;
+}
+.pembelajaran .list-video .wrap-list .image img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+.pembelajaran .list-video .wrap-list .text a {
+    line-height: 1.25px;
+    font-weight: 500;
+    text-transform:capitalize;
+    font-size: 17px;
+}
+.pembelajaran .list-video .wrap-list .text .info span {
+    color: #4b5565;
+    font-size: 14px;
+    font-weight: 500;
+}
+.pembelajaran .list-video .wrap-list .text .info i{
+    font-size: 11px;
+    margin-right: 3px;
 }
 footer {
     margin-top: 80px;
