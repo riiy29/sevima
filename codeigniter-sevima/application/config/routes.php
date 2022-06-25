@@ -64,5 +64,9 @@ $route['hubungiguru'] = 'Web/hubungiguru';
 $route['guru'] = 'Web/guru';
 $route['mengajar'] = 'Web/mengajar';
 
+// Auth
+$route['auth'] = 'Auth/login';
+$route['register'] = 'Auth/register';
+
 // Dashboard 
 $route['dashboard'] = 'Dashboard/home';
