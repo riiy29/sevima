@@ -38,78 +38,26 @@
 
             <div class="list-video">
                 <div class="row">
+                    <?php foreach($pelajaran as $list):?>
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="wrap-list">
                             <div class="image">
-                                <a href="subbelajar">
+                                <a href="<?= base_url("subbelajar/$list->id_pelajaran") ?>">
                                     <img src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/series/belajar-laravel-8-dari-awal-ign7z.jpg" class="img-responsive" alt="">
                                 </a>
                             </div>
                             <div class="text">
-                                <a href="subbelajar"> Belajar Laravel 8 dari awal</a>
+                                <a href="<?= base_url("subbelajar/$list->id_pelajaran") ?>"> <?=$list->nama_pelajaran?></a>
                                 <div class="info">
                                     <i class="fas fa-user-alt"></i>
-                                    <span>Bu Ika Hermawan</span>
+                                    <span> <?=$list->nama_guru?></span>
                                     <i class="fas fa-calendar-alt ms-3"></i>
-                                    <span>23-10-2022</span>
+                                    <span><?=$list->diinput_tgl?></span>
                                 </div>      
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="wrap-list">
-                            <div class="image">
-                                <a href="">
-                                    <img src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/series/belajar-laravel-8-dari-awal-ign7z.jpg" class="img-responsive" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                <a href="#"> Belajar Laravel 8 dari awal</a>
-                                <div class="info">
-                                    <i class="fas fa-user-alt"></i>
-                                    <span>Bu Ika Hermawan</span>
-                                    <i class="fas fa-calendar-alt ms-3"></i>
-                                    <span>23-10-2022</span>
-                                </div>      
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="wrap-list">
-                            <div class="image">
-                                <a href="">
-                                    <img src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/series/belajar-laravel-8-dari-awal-ign7z.jpg" class="img-responsive" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                <a href="#"> Belajar Laravel 8 dari awal</a>
-                                <div class="info">
-                                    <i class="fas fa-user-alt"></i>
-                                    <span>Bu Ika Hermawan</span>
-                                    <i class="fas fa-calendar-alt ms-3"></i>
-                                    <span>23-10-2022</span>
-                                </div>      
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="wrap-list">
-                            <div class="image">
-                                <a href="">
-                                    <img src="https://parsinta.s3.ap-southeast-1.amazonaws.com/images/series/belajar-laravel-8-dari-awal-ign7z.jpg" class="img-responsive" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                <a href="#"> Belajar Laravel 8 dari awal</a>
-                                <div class="info">
-                                    <i class="fas fa-user-alt"></i>
-                                    <span>Bu Ika Hermawan</span>
-                                    <i class="fas fa-calendar-alt ms-3"></i>
-                                    <span>23-10-2022</span>
-                                </div>      
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>

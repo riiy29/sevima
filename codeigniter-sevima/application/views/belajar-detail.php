@@ -5,7 +5,7 @@
                 <iframe  src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 </iframe>
             </div>
-            <h5>Belajar Laravel 8 dari awal - Mengenal Apa itu Routing</h5>
+            <h5><?=$video->nama_video?> </h5>
             <div class="info">
                 <i class="fas fa-user-alt"></i>
                 <span>Bu Ika Hermawan</span>

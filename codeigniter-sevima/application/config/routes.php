@@ -55,9 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['perpustakaan'] = 'buku/perpus';
 $route['bukudetail/(:num)'] = 'buku/bukudetail/$1';
-$route['belajar'] = 'Web/belajar';
-$route['subbelajar'] = 'Web/subbelajar';
-$route['belajardetail'] = 'Web/belajardetail';
+$route['belajar'] = 'pelajaran/belajar';
+$route['subbelajar/(:num)'] = 'pelajaran/subbelajar/$1';
+$route['belajardetail/(:num)'] = 'video/belajardetail/$1';
 $route['murid'] = 'Web/murid';
 $route['absen'] = 'absen/absen';
 $route['hubungiguru'] = 'guru/hubungiguru';

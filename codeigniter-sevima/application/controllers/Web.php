@@ -15,30 +15,9 @@ class Web extends CI_Controller {
 		$this->load->view('perpustakaan');
 		$this->load->view('layout/landing/footer');
 	}
-	public function bukudetail()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('bukudetail');
-		$this->load->view('layout/landing/footer');
-	}
-	public function belajar()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('belajar');
-		$this->load->view('layout/landing/footer');
-	}
-	public function subbelajar()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('subbelajar');
-		$this->load->view('layout/landing/footer');
-	}
-	public function belajardetail()
-	{
-		$this->load->view('layout/landing/header');
-		$this->load->view('belajar-detail');
-		$this->load->view('layout/landing/footer');
-	}
+	
+	
+	
 	public function murid()
 	{
 		$this->load->view('layout/landing/header');

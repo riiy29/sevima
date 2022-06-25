@@ -16,6 +16,13 @@ class video extends CI_Controller {
 		$this->load->view('dashboard/video', $data);
 		$this->load->view('layout/dashboard/footer');
 	}
+    public function belajardetail($id=null)
+	{
+        $data["video"] = $this->db->get_where('sevima_video', array('id_video' => $id))->row();;
+		$this->load->view('layout/landing/header');
+		$this->load->view('belajar-detail', $data);
+		$this->load->view('layout/landing/footer');
+	}
     public function add()
     {
         $this->video_model->save();

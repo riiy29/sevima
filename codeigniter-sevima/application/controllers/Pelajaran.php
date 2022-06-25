@@ -16,6 +16,21 @@ class Pelajaran extends CI_Controller {
 		$this->load->view('dashboard/pelajaran', $data);
 		$this->load->view('layout/dashboard/footer');
 	}
+    public function belajar()
+	{
+        $data['pelajaran'] = $this->pelajaran_model->getAll();
+		$this->load->view('layout/landing/header');
+		$this->load->view('belajar', $data);
+		$this->load->view('layout/landing/footer');
+	}
+    public function subbelajar($id = null)
+	{
+        $data["listvideo"] = $this->db->get_where('sevima_video', array('id_pelajaran' => $id))->result();;
+        $data["subbelajar"] = $this->db->get_where('sevima_pelajaran', array('id_pelajaran' => $id))->row();;
+		$this->load->view('layout/landing/header');
+		$this->load->view('subbelajar', $data);
+		$this->load->view('layout/landing/footer');
+	}
     public function add()
     {
         $this->pelajaran_model->save();
