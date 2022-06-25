@@ -6,8 +6,9 @@ class Guru_model extends CI_Model {
     public function getAll()
     {
         $this->db->select('*');
-        $this->db->from('sevima_jurusan');
-        $this->db->join('sevima_guru','sevima_guru.id_jurusan = sevima_jurusan.id_jurusan');      
+        $this->db->from('sevima_guru');
+        $this->db->join('sevima_jurusan','sevima_guru.id_jurusan = sevima_guru.id_jurusan', 'LEFT');
+        $this->db->join('sevima_user','sevima_jurusan.hak_akses = sevima_user.hak_akses', 'LEFT');     
         $query = $this->db->get();
         return $query->result();
     }
