@@ -10,7 +10,7 @@
                 <div class="card">
                   <div class="card-header">
                     <h4>Master Data Playlist</h4>
-                    <a href="" class="btn btn-dark ml-auto" data-toggle="modal" data-target="#add-guru">+ Tambah Data</a>
+
                   </div>
                   <div class="card-body">
                     <div class=" ">
@@ -20,21 +20,21 @@
                             <th class="text-center">
                              No
                             </th>
-                            <th> Nama Guru</th>
-                            <th>Jurusan</th>
-                            <th>No. Whatsapp</th>
+                            <th> Nama </th>
+                            <th>Email</th>
+                            <th>User Akses</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <?php $no=1; foreach($guru as $row):?>
-                          <tr >
+                          <?php $no=1; foreach($user as $row):?>
+                          <tr id="<?=$row->id_user?>">
                             <td>
                              <?= $no++?>
                             </td>
-                            <td><?=$row->nama_guru?></td>
-                            <td><?=$row->nama_jurusan?></td>
-                            <td><?=$row->no_wa?></td>
+                            <td><?=$row->nama?></td>
+                            <td><?=$row->email?></td>
+                            <td><?=$row->user_akses?></td>
                             <td>
                                 <button type="" class="btn btn-danger btn-sm" id="remove"> 
                                     <i class="fas fa-trash"></i>
@@ -52,46 +52,6 @@
             </div>
           </div>
         </section>
-    </div>
-
-     <!-- Modal form add -->
-     <div class="modal fade" id="add-guru" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Tambah Buku</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="<?= base_url().'user/add'?>" method="post" enctype="multipart/form-data">
-              <div class="card">
-                  <div class="card-body">
-                    <div class="form-group ">
-                      <label for="inputEmail4">Nama Guru</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="nama">
-                    </div>
-                    <div class="form-group ">
-                      <label for="inputEmail4">No. Whatsapp</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="no_wa">
-                    </div>
-                    
-                    <select class="form-control">
-                        <option>Open this select menu</option>
-                        <?php foreach($jurusan as $rows):?>
-                        <option name="jurusan" value="<?=$rows->id_jurusan?>"><?=$rows->nama_jurusan?></option>
-                        <?php endforeach;?>
-                      </select>
-                  </div>
-                  <div class="card-footer">
-                    <button type="" class="btn btn-primary">Submit</button>
-                  </div>
-                  </div>
-              </div>
-            </form> 
-        </div>
-      </div>
     </div>
      
     <script src="<?= base_url('assets/dashboard/modules/jquery.min.js')?>"></script>
@@ -112,7 +72,7 @@
         .then((isConfirm) => {
             if (isConfirm) {
             $.ajax( {
-                url: '/guru/delete/'+id,
+                url: '/user/delete/'+id,
                 type: 'DELETE',
                 error: function() {
                     alert(' Ada yang error ');

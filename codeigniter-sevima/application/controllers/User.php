@@ -1,26 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Guru extends CI_Controller {
+class User extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('Guru_model');
+		$this->load->model('user_model');
         $this->load->library('form_validation');
 	}
 
 	public function home()
 	{
-        $data['guru'] = $this->Guru_model->getAll();
-        $data['jurusan'] = $this->Guru_model->getJurusan();
+        $data['user'] = $this->user_model->getAll();
 		$this->load->view('layout/dashboard/header');
-		$this->load->view('dashboard/guru', $data);
+		$this->load->view('dashboard/user', $data);
 		$this->load->view('layout/dashboard/footer');
 	}
     public function add()
     {
-        $this->Guru_model->save();
-        redirect(site_url('dashboard/guru'));
+        $this->user_model->save();
+        redirect(site_url('dashboard/user'));
        
     }
 
@@ -28,8 +27,8 @@ class Guru extends CI_Controller {
     {
         if (!isset($id)) show_404();
         
-        if ($this->Guru_model->delete($id)) {
-            redirect(site_url('dashboard/guru'));
+        if ($this->user_model->delete($id)) {
+            redirect(site_url('dashboard/user'));
         }
     }
 }
