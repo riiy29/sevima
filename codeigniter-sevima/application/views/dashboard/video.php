@@ -9,8 +9,8 @@
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Master Data Playlist</h4>
-                    <a href="" class="btn btn-dark ml-auto" data-toggle="modal" data-target="#add-guru">+ Tambah Data</a>
+                    <h4>Master Data video</h4>
+                    <a href="" class="btn btn-dark ml-auto" data-toggle="modal" data-target="#add-video">+ Tambah Data</a>
                   </div>
                   <div class="card-body">
                     <div class=" ">
@@ -20,21 +20,21 @@
                             <th class="text-center">
                              No
                             </th>
-                            <th> Nama Guru</th>
-                            <th>Jurusan</th>
-                            <th>No. Whatsapp</th>
+                            <th> Nama Materi</th>
+                            <th>Nama Pelajaran</th>
+                            <th>Url Video</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <?php $no=1; foreach($guru as $row):?>
-                          <tr >
+                          <?php $no=1; foreach($video as $row):?>
+                          <tr id="<?=$row->id_video?>">
                             <td>
                              <?= $no++?>
                             </td>
-                            <td><?=$row->nama_guru?></td>
-                            <td><?=$row->nama_jurusan?></td>
-                            <td><?=$row->no_wa?></td>
+                            <td><?=$row->nama_video?></td>
+                            <td><?=$row->nama_pelajaran?></td>
+                            <td><?=$row->url_video?></td>
                             <td>
                                 <button type="" class="btn btn-danger btn-sm" id="remove"> 
                                     <i class="fas fa-trash"></i>
@@ -53,9 +53,11 @@
           </div>
         </section>
     </div>
+     
+    <script src="<?= base_url('assets/dashboard/modules/jquery.min.js')?>"></script>
 
-     <!-- Modal form add -->
-     <div class="modal fade" id="add-guru" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal form add -->
+    <div class="modal fade" id="add-video" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -65,24 +67,27 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="<?= base_url().'guru/add'?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url().'video/add'?>" method="post" enctype="multipart/form-data">
               <div class="card">
                   <div class="card-body">
                     <div class="form-group ">
-                      <label for="inputEmail4">Nama Guru</label>
+                      <label for="inputEmail4">Nama video</label>
                       <input type="text" class="form-control" id="inputEmail4" placeholder="" name="nama">
                     </div>
                     <div class="form-group ">
-                      <label for="inputEmail4">No. Whatsapp</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="no_wa">
+                      <label for="inputEmail4">Deskripsi</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="deskripsi">
                     </div>
-                    <?php foreach($jurusan as $rows):?>
+                    <?php foreach($pelajaran as $rows):?>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input"  name="jurusan" type="radio" id="inlineradio1" value="<?=$rows->id_jurusan?>">
-                        <label class="form-check-label" for="inlineradio1"><?=$rows->nama_jurusan?></label>
+                        <input class="form-check-input"  name="pelajaran" type="radio" id="inlineradio1" value="<?=$rows->id_pelajaran?>">
+                        <label class="form-check-label" for="inlineradio1"><?=$rows->nama_pelajaran?></label>
                     </div>
                     <?php endforeach;?>
-                
+                    <div class="form-group ">
+                      <label for="inputEmail4">Link Youtube Video</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="ytb_url">
+                    </div>
                   </div>
                   <div class="card-footer">
                     <button type="" class="btn btn-primary">Submit</button>
@@ -93,8 +98,6 @@
         </div>
       </div>
     </div>
-     
-    <script src="<?= base_url('assets/dashboard/modules/jquery.min.js')?>"></script>
 
     <script>
     
@@ -112,7 +115,7 @@
         .then((isConfirm) => {
             if (isConfirm) {
             $.ajax( {
-                url: '/guru/delete/'+id,
+                url: '/video/delete/'+id,
                 type: 'DELETE',
                 error: function() {
                     alert(' Ada yang error ');

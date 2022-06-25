@@ -5,9 +5,19 @@ class Pelajaran_model extends CI_Model {
 
     public function getAll()
     {
-        return $this->db->get('sevima_pelajaran')->result();
+        $this->db->select('*');
+        $this->db->from('sevima_guru');
+        $this->db->join('sevima_pelajaran','sevima_pelajaran.id_guru = sevima_guru.id_guru');      
+        $query = $this->db->get();
+        return $query->result();
     }
-    
+    public function getGuru()
+    {
+        $this->db->select('*');
+        $this->db->from('sevima_guru');
+        $query = $this->db->get();
+        return $query->result();
+    }
     public function getById($id)
     {
         return $this->db->get_where('sevima_pelajaran', ["id_pelajaran" => $id])->row();
@@ -15,27 +25,30 @@ class Pelajaran_model extends CI_Model {
 
     public function save()
     {
-        $post = $this->input->post();
-        $this->product_id = uniqid();
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
-        return $this->db->insert($this->_table, $this);
-    }
+        $config['upload_path']          = './assets/img/modul';
+        $config['allowed_types']        = 'pdf';
+        $config['overwrite']            = true;
+        $config['file_name']            = md5($_FILES["pdf_file"]['name']);
 
-    public function update()
-    {
-        $post = $this->input->post();
-        $this->product_id = $post["id"];
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
-        return $this->db->update($this->_table, $this, array('product_id' => $post['id']));
+        $this->load->library('upload', $config);
+        
+        if (!$this->upload->do_upload('pdf_file')) {
+            echo "<script>alert('Gagal menambah file'</script>";
+        }
+        else {
+            $post = $this->input->post();
+            $this->nama_pelajaran = $post['nama'];
+            $this->desc_pelajaran = $post['deskripsi'];
+            $this->id_guru = $post['guru'];
+            $this->modul_url = base_url("assets/img/modul".$config['file_name']).'.'.pathinfo($_FILES["pdf_file"]['name'], PATHINFO_EXTENSION);
+            $this->diinput_tgl = date('Y-m-d');
+            $this->db->insert('sevima_pelajaran', $this);
+        }
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array("product_id" => $id));
+        return $this->db->delete('sevima_pelajaran', array("id_pelajaran" => $id));
     }
 	
 }

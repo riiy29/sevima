@@ -75,9 +75,10 @@
             <li class="<?php if($this->uri->uri_string() == 'dashboard/absen') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/absen')?>"><i class="far fa-calendar-alt"></i><span>Absen</span></a></li>
             <li class="<?php if($this->uri->uri_string() == 'dashboard/buku') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/buku')?>"><i class="fas fa-book"></i> <span>Data Buku</span></a></li>
             <li class="<?php if($this->uri->uri_string() == 'dashboard/pelajaran') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/pelajaran')?>"><i class="fas fa-school"></i><span>Pembelajaran</span></a></li>
+            <li class="<?php if($this->uri->uri_string() == 'dashboard/video') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/video')?>"><i class="fas fa-school"></i><span>Materi</span></a></li>
             <li class="<?php if($this->uri->uri_string() == 'dashboard/guru') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/guru')?>"><i class="fas fa-user-graduate"></i> <span>Data Guru</span></a></li>
             <li class="<?php if($this->uri->uri_string() == 'dashboard/jurusan') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/jurusan')?>"><i class="fab fa-pied-piper-alt"></i> <span>Jurusan</span></a></li>
-            <li class="<?php if($this->uri->uri_string() == 'dashboard/komentar') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/komentar')?>"><i class="fas fa-comment-dots "></i> <span>Komentar</span></a></li>
+            <!-- <li class="<?php if($this->uri->uri_string() == 'dashboard/komentar') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/komentar')?>"><i class="fas fa-comment-dots "></i> <span>Komentar</span></a></li> -->
             <li class="<?php if($this->uri->uri_string() == 'dashboard/user') { echo 'active'; } ?>"><a class="nav-link" href="<?=  base_url('dashboard/user')?>"><i class="fas fa-users "></i> <span>User</span></a></li>
             
         </ul>

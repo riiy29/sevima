@@ -9,8 +9,8 @@
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Master Data Playlist</h4>
-                    <a href="" class="btn btn-dark ml-auto" data-toggle="modal" data-target="#add-guru">+ Tambah Data</a>
+                    <h4>Master Data Pelajaran</h4>
+                    <a href="" class="btn btn-dark ml-auto" data-toggle="modal" data-target="#add-pelajaran">+ Tambah Data</a>
                   </div>
                   <div class="card-body">
                     <div class=" ">
@@ -20,21 +20,23 @@
                             <th class="text-center">
                              No
                             </th>
-                            <th> Nama Guru</th>
-                            <th>Jurusan</th>
-                            <th>No. Whatsapp</th>
+                            <th> Nama </th>
+                            <th>Guru Pengajar</th>
+                            <th>Deskripsi</th>
+                            <th>Modul</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <?php $no=1; foreach($guru as $row):?>
-                          <tr >
+                          <?php $no=1; foreach($pelajaran as $row):?>
+                          <tr id="<?=$row->id_pelajaran?>">
                             <td>
                              <?= $no++?>
                             </td>
+                            <td><?=$row->nama_pelajaran?></td>
                             <td><?=$row->nama_guru?></td>
-                            <td><?=$row->nama_jurusan?></td>
-                            <td><?=$row->no_wa?></td>
+                            <td><?=$row->desc_pelajaran?></td>
+                            <td><?=$row->modul_url?></td>
                             <td>
                                 <button type="" class="btn btn-danger btn-sm" id="remove"> 
                                     <i class="fas fa-trash"></i>
@@ -53,9 +55,11 @@
           </div>
         </section>
     </div>
+     
+    <script src="<?= base_url('assets/dashboard/modules/jquery.min.js')?>"></script>
 
-     <!-- Modal form add -->
-     <div class="modal fade" id="add-guru" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal form add -->
+    <div class="modal fade" id="add-pelajaran" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -65,24 +69,30 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="<?= base_url().'guru/add'?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url().'pelajaran/add'?>" method="post" enctype="multipart/form-data">
               <div class="card">
                   <div class="card-body">
                     <div class="form-group ">
-                      <label for="inputEmail4">Nama Guru</label>
+                      <label for="inputEmail4">Nama Pelajaran</label>
                       <input type="text" class="form-control" id="inputEmail4" placeholder="" name="nama">
                     </div>
                     <div class="form-group ">
-                      <label for="inputEmail4">No. Whatsapp</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="no_wa">
+                      <label for="inputEmail4">Deskripsi</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="deskripsi">
                     </div>
-                    <?php foreach($jurusan as $rows):?>
+                    <?php foreach($guru as $rows):?>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input"  name="jurusan" type="radio" id="inlineradio1" value="<?=$rows->id_jurusan?>">
-                        <label class="form-check-label" for="inlineradio1"><?=$rows->nama_jurusan?></label>
+                        <input class="form-check-input"  name="guru" type="radio" id="inlineradio1" value="<?=$rows->id_guru?>">
+                        <label class="form-check-label" for="inlineradio1"><?=$rows->nama_guru?></label>
                     </div>
                     <?php endforeach;?>
-                
+                    <div class="form-group ">
+                      <div class="section-title">File PDF Modul</div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" name="pdf_file">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div>
                   </div>
                   <div class="card-footer">
                     <button type="" class="btn btn-primary">Submit</button>
@@ -93,8 +103,6 @@
         </div>
       </div>
     </div>
-     
-    <script src="<?= base_url('assets/dashboard/modules/jquery.min.js')?>"></script>
 
     <script>
     
@@ -112,7 +120,7 @@
         .then((isConfirm) => {
             if (isConfirm) {
             $.ajax( {
-                url: '/guru/delete/'+id,
+                url: '/pelajaran/delete/'+id,
                 type: 'DELETE',
                 error: function() {
                     alert(' Ada yang error ');
