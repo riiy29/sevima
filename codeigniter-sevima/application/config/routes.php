@@ -71,3 +71,5 @@ $route['register'] = 'Auth/register';
 // Dashboard 
 $route['dashboard'] = 'Dashboard/home';
 $route['dashboard/jurusan'] = 'Jurusan/home';
+$route['dashboard/buku'] = 'buku/home';
+$route['dashboard/guru'] = 'guru/home';
