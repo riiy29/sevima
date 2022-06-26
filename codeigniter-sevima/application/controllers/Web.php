@@ -3,10 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Web extends CI_Controller {
 
+	function __construct(){
+		parent::__construct();
+		$this->load->model('buku_model');
+        $this->load->library('form_validation');
+	}
+
 	public function index()
 	{
+		$data['buku'] = $this->buku_model->getAll();
 		$this->load->view('layout/landing/header');
-		$this->load->view('index');
+		$this->load->view('index', $data);
 		$this->load->view('layout/landing/footer');
 	}
 	public function perpus()
